@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="AlgorytmMrowkowyMinMax.View.BezPrzeszkodView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AlgorytmMrowkowyMinMax.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="1200" d:DesignWidth="1000">
+    <Grid>
+        <Grid x:Name="bezPrzeszkodView" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="174*"/>
+                <RowDefinition Height="53*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="77*"/>
+                <ColumnDefinition Width="123*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Start" Content="Szukaj trasy" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Click="Start_Click" MinWidth="30" MinHeight="10" VerticalAlignment="Top" Margin="22,45,24,24" MaxWidth="150" RenderTransformOrigin="0.389,9.108" Grid.Row="2" MaxHeight="48" FontSize="20" FontWeight="Bold"/>
+            <Canvas Name="polenagraf" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,20,0"/>
+
+            <Label x:Name="LabelPoczatek" HorizontalAlignment="Left" Height="40" Margin="85,20,0,0" Content="Początek" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxPoczatek" HorizontalAlignment="Left" Height="15" Margin="170,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" TextChanged="TextBoxPoczatek_TextChanged" RenderTransformOrigin="-2.929,4.246" Grid.Row="1"/>
+
+            <Label x:Name="LabelKoniec" HorizontalAlignment="Left" Height="40" Margin="85,44,0,0" Content="Koniec" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxKoniec" HorizontalAlignment="Left" Height="15" Margin="170,50,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.465,0.559" TextChanged="TextBoxKoniec_TextChanged" TextWrapping="Wrap" Grid.Row="1" />
+
+            <Label x:Name="LabelLiczbaIteracji" HorizontalAlignment="Left" Height="40" Margin="85,70,0,0" Content="Liczba Iteracji" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxLiczbaIteracji" HorizontalAlignment="Left" Height="15" Margin="170,75,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.465,0.559" TextChanged="TextBoxLiczbaIteracji_TextChanged" TextWrapping="Wrap" Grid.Row="1"/>
+
+            <Label x:Name="LabelWspolczynnikalfa" HorizontalAlignment="Left" Height="40" Margin="85,95,0,0" Content="α" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxWspolczynnikAlfa" HorizontalAlignment="Left" Height="15" Margin="170,100,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.465,0.559" TextChanged="TextBoxWspolczynnikAlfa_TextChanged" TextWrapping="Wrap" Grid.Row="1"/>
+            <Label x:Name="LabelWspolczynnikBeta" HorizontalAlignment="Left" Height="40" Margin="85,120,0,0" Content="β" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxWspolczynnikBeta" HorizontalAlignment="Left" Height="15" Margin="170,125,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.465,0.559" TextChanged="TextBoxWspolczynnikBeta_TextChanged" TextWrapping="Wrap" Grid.Row="1"/>
+            <Label x:Name="LabelWspolczynnikρ" HorizontalAlignment="Left" Height="40" Margin="85,145,0,0" Content="ρ" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="TextBoxWspolczynnikρ" HorizontalAlignment="Left" Height="15" Margin="170,150,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="2.465,0.559" TextChanged="TextBoxWspolczynnik_TextChangedρ" TextWrapping="Wrap" Grid.Row="1"/>
+
+            <GroupBox Header="Parametry" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="200" Grid.Row="1" Margin="60,0,0,0">
+
+
+            </GroupBox>
+            <Label Content="Bez przeszkody" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Height="58" Margin="0,0,0,0" VerticalAlignment="Center" Width="auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
+
+        </Grid>
+    </Grid>
+</UserControl>
